@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 header {
     display: flex;
     align-items: center;
@@ -10,24 +9,25 @@ header {
     background-color: purple;
     color: #fff;
 }
-
 header ul {
     display: flex;
 }
-
 header li {
     margin: 0 15px;
     list-style: none;
 }
 
-#presentation > div {
-margin: 15px;
-}
-
 #presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
+    border-bottom: 5px double #000000;
+}
+#presentation > div {
+    margin: 15px;
 }
 
 #experiences {
@@ -44,5 +44,9 @@ footer {
     padding: 15px;
     background-color: purple;
     color: #fff;
+    font-weight: bold;
 }
+ img {
+    border-radius: 50%;
+ }
     

@@ -7,18 +7,19 @@
         <link rel="stylesheet" href="teacher.css">
         <title>teacher's correction</title>
     </head>
+    
     <body>
 
         <?php
-            $prenom = mb_strtoupper("Lawrence"); 
-            $nom = "Terpin";
+            $prenom = "Isaac";
+            $nom = mb_strtoupper("Tan"); 
             $age = 29;
-            $metier = "Formateur Web";
+            $metier = "Collégien";
             $image = "teacher.jpg";
-            $titreExperience1 = "Formations web - Doranco";
-            $descriptionExperience1 = "Formations dans le domaine du web dev";
-            $titreExperience2 = "Conception d'applications";
-            $descriptionExperience2 = "FConception d'applications Android, IOS";
+            $titreExperience1 = "collégien - Collège International NLG";
+            $descriptionExperience1 = "Collège Int'l NLG - Éducation Nationale";
+            $titreExperience2 = "collégien - Section Américaine";
+            $descriptionExperience2 = "Collège Int'l NLG - Éducation Nationale";
         ?>
 
 
@@ -46,6 +47,7 @@
                     <p><?php echo $metier; ?></p>
                 </div>
                 <div>
+                    <!-- <img src="images/<?php echo $image; ?>"> -->
                     <img src="teacher.jpg">
                 </div>
             </section>
@@ -57,17 +59,19 @@
                         <!-- <h2>Formation Web - Doranco</h2> -->
                         <h2><?php echo $titreExperience1; ?></h2>
                         <!-- <p>Formations dans le domaine du web pour l'École Doranco</p> -->
-                        <p><?php echo $descrioptionExperience2 ?></p>
+                        <p><?php echo $descriptionExperience2; ?></p>
                     </li>
                     <li>
-                        <h2>Concepton d'applications</h2>
-                        <p>Conception d'applications</p>
+                        <!-- <h2>Concepton d'applications</h2> -->
+                        <h2><?php echo $titreExperience2; ?></h2>
+                        <!-- <p>Conception d'applications</p> -->
+                        <p><?php echo $descriptionExperience2; ?></p>
                     </li>
                 </ul>
             </section>
         </main>
 
         <!-- BAS de la page -->
-        <footer>Portfolio</footer>
+        <footer>Portfolio (FOOTER)</footer>
     </body>
 </html>
