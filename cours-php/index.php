@@ -6,8 +6,8 @@
     <body>
         <h1>Cours PHP (test)</h1>
         <!-- (for Apple) localhost:8888/cours-php -->
-        <!-- (Windows) localhost/cours-php -->
-        <!-- (my path) http://localhost/y.doranco-5-PHP/cours-php/ -->
+        <!-- (Windows, camarades) localhost/cours-php -->
+        <!-- (MY path) http://localhost/y.doranco-5-PHP/cours-php/ -->
         <!-- PHP Intelephense (VScode extension, sth like validator) -->
 
 
@@ -50,7 +50,8 @@
 
 
         <!-- JOUR 2 -->
-        <!-- ************************************ -->
+        <!-- ******************************************** -->
+        <!-- ******************************************** -->
         
         <!-- Lawrence -->
         <!-- 29 ans, Formateur Web -->
@@ -60,14 +61,41 @@
         $age = 29;
         $job = "Formateur Web";
         ?>
-
         <br>
-
         <?php
         echo $prenom . "<br>";
         echo $age . " ans, " . $job;
         ?>
 
+
+        <!-- FORM -->
+        <form method="POST">
+            <h2>Formulaire d'inscription</h2>
+            <input type="text" name="prenom" placeholder="Votre prénom">
+            <input type="text" name="email" placeholder="Votre email">
+            <input type="password" name="mdp" placeholder="Votre mot de passe">
+            <input type="password" name="mdp-confirmation" placeholder="Confirmez le mot de passe">
+            <input type="submit" name="inscription" value="S'inscrire">
+        </form>
+
+        <!-- on va vérifier si le formulaire est soumis -->
+        <?php 
+        if ($_POST["inscription"]){
+            // récupération des champs
+            $prenom = $_POST["prenom"];
+            $email = $_POST["email"];
+            $mdp = $_POST["mdp"];
+            $mdpConfirmation = $_POST["mdp-confirmation"];
+
+            echo "L'utilisateur a bien été enregistré:<br>";
+            echo $prenom . "<br>" . $email . "<br>" . $mdp . "<br>" . $mdpConfirmation;
+
+            // création des cookies utilisateurs
+            setcookie("prenom", $prenom);
+            setcookie("email", $email);
+            setcookie("mdp", $mdp);
+        }
+        ?>
 
     </body>
 </html>

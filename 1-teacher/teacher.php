@@ -7,12 +7,12 @@
         <link rel="stylesheet" href="teacher.css">
         <title>teacher's correction</title>
     </head>
-    
+
     <body>
 
         <?php
             $prenom = "Isaac";
-            $nom = mb_strtoupper("Tan"); 
+            $nom = mb_strtoupper("tan"); 
             $age = 29;
             $metier = "Collégien";
             $image = "teacher.jpg";
@@ -29,8 +29,10 @@
             <!-- Menu prinicipal -->
             <nav>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <!-- <li><a href="#">Accueil</a></li> -->
+                    <!-- <li><a href="#">Portfolio</a></li> -->
+                    <li><a>Accueil</a></li>
+                    <li><a>Portfolio</a></li>
                 </ul>
             </nav>
         </header>

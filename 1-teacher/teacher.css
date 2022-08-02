@@ -16,6 +16,9 @@ header li {
     margin: 0 15px;
     list-style: none;
 }
+/* header ul li a {
+    color: #fff;
+} */
 
 #presentation {
     display: flex;
