@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: purple;
+    color: #fff;
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    margin: 0 15px;
+    list-style: none;
+}
+
+#presentation > div {
+margin: 15px;
+}
+
+#presentation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#experiences {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+#experiences li {
+    margin-bottom: 15px;
+    border-bottom: 3px double #000000;
+}
+
+footer {
+    padding: 15px;
+    background-color: purple;
+    color: #fff;
+}
+    
