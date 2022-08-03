@@ -10,7 +10,6 @@
         <!-- (MY path) http://localhost/y.doranco-5-PHP/cours-php/ -->
         <!-- PHP Intelephense (VScode extension, sth like validator) -->
 
-
         <!-- Date - PHP: -->
         <!-- https://www.php.net/manual/fr/function.date.php -->
         <!-- Echo - PHP: -->
@@ -18,6 +17,7 @@
         <!-- Concaténation - PHP: -->
         <!-- https://www.php.net/manual/fr/language.operators.string.php -->
 
+        
         <!-- JOUR 1 -->
         <!-- ************************************ -->
         <?php
@@ -90,12 +90,35 @@
             echo "L'utilisateur a bien été enregistré:<br>";
             echo $prenom . "<br>" . $email . "<br>" . $mdp . "<br>" . $mdpConfirmation;
 
-            // création des cookies utilisateurs
+            // CRÉATION des COOKIES utilisateurs
+
+            // 86400*365*100 = (1 century) => this one doesn't make sense
+            setcookie("prenom", $prenom, time() + 86400*365*100);
+            // 86400*365*10 = (1 decade)
+            setcookie("prenom", $prenom, time() + 86400*365*10);
+            // 86400*365 = (1 year)
+            setcookie("prenom", $prenom, time() + 86400*365);
+            // 86400*30 = (1 month)
+            setcookie("prenom", $prenom, time() + 86400*30);
+            // 86400*7 = (1 week)
+            setcookie("prenom", $prenom, time() + 86400*7);
+            // 86400 = 3600*24 = (1 day)
+            setcookie("prenom", $prenom, time() + 86400);
+            // 3600 = (1 hour)
+            setcookie("prenom", $prenom, time() + 3600);
+            // default no expiry
             setcookie("prenom", $prenom);
-            setcookie("email", $email);
-            setcookie("mdp", $mdp);
+
+            // ---------------------------------------
+            setcookie("email", $email, time() + 3600);
+            setcookie("mdp", $mdp, time() + 3600);
         }
         ?>
+
+        <!-- the two below are the SAME -->
+        <?php setcookie( "testCookie", $value, time() + (3600*30) ); ?>
+        <?php setcookie( "testCookie", $value, strtotime( '+30 days' ) ); ?>
+
 
     </body>
 </html>
