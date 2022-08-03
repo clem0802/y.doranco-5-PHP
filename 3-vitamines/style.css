@@ -1,0 +1,33 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    border-bottom: 1px solid gray;
+}
+h2 {
+    color: dodgerblue;
+}
+
+input {
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+}
+.submit {
+    background-color: rgb(132, 187, 132);
+    font-weight: bold;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    border: 2px solid rgb(75, 149, 75);
+    border-radius: 12px;
+    padding: 5px;
+    margin: 10px;
+}
