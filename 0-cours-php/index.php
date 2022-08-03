@@ -6,8 +6,8 @@
     <body>
         <h1>Cours PHP (test)</h1>
         <!-- (for Apple) localhost:8888/cours-php -->
-        <!-- (Windows, camarades) localhost/cours-php -->
-        <!-- (MY path) http://localhost/y.doranco-5-PHP/cours-php/ -->
+        <!-- (Windows, camarades) localhost/0-cours-php -->
+        <!-- (MY path) http://localhost/y.doranco-5-PHP/0-cours-php/ -->
         <!-- PHP Intelephense (VScode extension, sth like validator) -->
 
         <!-- Date - PHP: -->

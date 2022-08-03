@@ -32,5 +32,23 @@
             echo "Erreur: " . $erreur->getMessage();
         }
         ?>
+
+        <!-- ******************************************************** -->
+        <!-- pour récupérer les deux articles qu'on a créés -->
+        <!-- exécuter une requête SQL, pour les afficher sur le browser -->
+        <!-- faire un boucle pour parcourir chaque article -->
+        <?php
+            // $articles = $connexion->query("SELECT * FROM articles WHERE id = 1 OR id = 2");
+            $articles = $connexion->query("SELECT * FROM articles");
+
+            echo "<ul>";
+            foreach($articles as $article) {
+                echo "<li>
+                <h3>" . $article['titre'] . "</h3>
+                <p>Publié le: " . $article['date'] . "</p>
+                     </li>";
+            }
+            echo "</ul>";
+        ?>
     </body>
 </html>
