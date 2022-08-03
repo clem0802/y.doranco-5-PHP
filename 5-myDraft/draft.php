@@ -40,30 +40,30 @@
 
 <body>
   <header>
-    <nav class="d-flex">
-      <div class="header-links hide">
-        <div class="links">
-          <a href="#">LOGO</a>
-        </div>
-        <div class="links">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div>
+      <nav class="d-flex">
+          <div class="header-links hide">
+              <div class="links">
+                <a href="#">LOGO</a>
+              </div>
+              <div class="links">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+          </div>
 
-      <div class="close">
-            <h3>x</h3>
-      </div>
-      
-      <div class="burger">
-        <i class="fa-solid fa-burger"></i>
-      </div>
-
-    </nav>
+          <div class="close">
+                <h3>x</h3>
+          </div>
+        
+          <div class="burger">
+            <i class="fa-solid fa-burger"></i>
+          </div>
+      </nav>
   </header>
 
-  
+
+  <!-- *************************************************** -->
   <main hidden>
     <h2>MAIN</h2>
 
@@ -126,7 +126,6 @@
 
 
 
-
     <!-- ex of img SRC -->
     <div class="main-right">
         <?php 
@@ -134,6 +133,7 @@
         ?>
     
     </div>
+
 
 
     <!-- ex of FORM -->
@@ -184,6 +184,7 @@
     ?>
 
 
+
     <!-- ex of TIME -->
     <?php
         echo "Bonjour tout le monde, je suis du texte en PHP<br>";
@@ -214,9 +215,51 @@
     ?>
 
 
+
+    <!-- connection to BDD (phpMyAdmin) -->
+    <?php
+        // Connexion à la base de données (paramètres de connexion)
+        // (MY path) http://localhost/y.doranco-5-PHP/2-myAdmin/myAdmin.php
+        $adresseBdd = "localhost:3306"; // Mac: 8889, Windows:3306 (moi)
+        $utilisateurBdd = "root";
+        $mdpUtilisateurBdd = "root"; // Mac: "root", Windows: ""
+        $nomBdd = "blog";
+
+        // pour tester si la connexion est bonne, exécuter la connexion
+        // "$connexion" est une variable de connexion
+        try {
+                      // méthode de connexion, PDO (PHP Data Objects)
+            $connexion = new PDO("mysql:host=" . $adresseBdd . ";dbname=" . $nomBdd, $utilisateurBdd, $mdpUtilisateurBdd); 
+
+            echo "Connexion réussie :)";
+        }
+        catch(PDOException $erreur){
+            echo "Erreur: " . $erreur->getMessage();
+        }
+    ?>
+
+    <!-- ******************************************************** -->
+    <!-- GET les 2 articles qu'on a créés -->
+    <!-- exécuter une requête SQL, pour les afficher sur le browser -->
+    <!-- faire un boucle pour parcourir chaque article -->
+    <?php
+        // $articles = $connexion->query("SELECT * FROM articles WHERE id = 1 OR id = 2");
+        $articles = $connexion->query("SELECT * FROM articles");
+
+        echo "<ul>";
+        foreach($articles as $article) {
+            echo "<li>
+            <h3>" . $article['titre'] . "</h3>
+            <p>Publié le: " . $article['date'] . "</p>
+                </li>";
+        }
+        echo "</ul>";
+    ?>
+
   </main>
 
 
+  <!-- *************************************************** -->
   <footer>
     <h2>FOOTER</h2>
   </footer>

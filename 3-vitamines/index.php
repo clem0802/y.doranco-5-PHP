@@ -12,8 +12,8 @@
             crossorigin="anonymous"
         /> 
         <link rel="stylesheet" href="style.css">
-        <title>EXO2 (Lawrence) - Fruggies (clémence)</title>
-        <meta name="description" content="EXO2 (Lawrence) - Fruggies (clémence)">
+        <title>Lawrence's lesson-3-EXO2 - Fruggies (clémence)</title>
+        <meta name="description" content="Lawrence's lesson-3-EXO2 - Fruggies (clémence)">
     </head>
 
     <body class="container-fluid d-flex flex-column justify-content-center align-items-center text-center">

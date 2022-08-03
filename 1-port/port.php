@@ -14,12 +14,13 @@
         referrerpolicy="no-referrer" 
         />
 
-        <title>EXO 1 (portfolio)
+        <title>Lawrence's lesson-2, EXO 1 (portfolio)
                Class exercise during Doranco lesson
                NON-responsive, for big desktop screen practice only
                Based on pic chosen by teacher Lawrence:
                <!-- https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/1997/posts/37445/image-upload/SAVIN.jpg -->
         </title>
+        <meta name="description" content="Lawrence's lesson-2, EXO 1 (portfolio)">
     </head>
     
     <body>
