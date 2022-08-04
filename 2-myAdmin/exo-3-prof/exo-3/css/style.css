@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+}
+
+header, footer {
+    padding: 15px;
+    background-color: purple;
+    color: #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+main ul {
+    margin: 0;
+    padding: 0;
+}
+
+main li {
+    margin-bottom: 15px;
+    padding: 15px;
+    list-style: none;
+    border: 1px solid #000000;
+    background-color: #fff;
+}
