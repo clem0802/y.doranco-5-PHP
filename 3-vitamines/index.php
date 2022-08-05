@@ -61,13 +61,13 @@
 
             <h2>Welcome to Clémence's Fruggies Database</h2>
             <?php
-            // Connexion à la base de données (paramètres de connexion)
-            // (MY path) http://localhost/y.doranco-5-PHP/3-vitamines/index.php
-            // (pr Gwenn) https://www.php.net/manual/fr/function.round.php
-            $adresseBdd = "localhost:3306"; // Mac: 8889, Windows:3306 (moi)
-            $utilisateurBdd = "root";
-            $mdpUtilisateurBdd = "root"; // Mac: "root", Windows: ""
-            $nomBdd = "vitamines";
+                // Connexion à la base de données (paramètres de connexion)
+                // (MY path) http://localhost/y.doranco-5-PHP/3-vitamines/index.php
+                // (pr Gwenn) https://www.php.net/manual/fr/function.round.php
+                $adresseBdd = "localhost:3306"; // Mac: 8889, Windows:3306 (moi)
+                $utilisateurBdd = "root";
+                $mdpUtilisateurBdd = "root"; // Mac: "root", Windows: ""
+                $nomBdd = "vitamines";
             
             // pour tester si la connexion est bonne, exécuter la connexion
             // "$connexion" est une variable de connexion
@@ -182,9 +182,9 @@
 
             <!-- (4) ATTRIBUTION -->
             <div class="attribution text-center">
-            PHP Exercise Project<br>
-            Coded by <a target="_blank" href="https://portfolio-clemence.netlify.app">Clémence TAN</a>
-            <p>&copy; Copyright 2022 - All rights reserved</p>
+                PHP Exercise Project<br>
+                Coded by <a target="_blank" href="https://portfolio-clemence.netlify.app">Clémence TAN</a>
+                <p>&copy; Copyright 2022 - All rights reserved</p>
             </div>
 
         </main>
