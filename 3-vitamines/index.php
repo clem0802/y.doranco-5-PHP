@@ -95,7 +95,7 @@
                 <input type="password" name="mdp" placeholder="Set your password">
                 <input type="password" name="mdp-confirmation" placeholder="Confirm your password">
                 <textarea name="message" id="message" cols="28" rows="5" placeholder="Your message"></textarea>
-                <input type="submit" name="inscription" value="Subscribe" class="submit">
+                <input type="submit" name="inscription" value="Submit" class="submit">
             </form>
             <br>
             <br>
