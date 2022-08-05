@@ -1,0 +1,10 @@
+header, footer {
+    background-color: purple;
+    color: #fff;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}

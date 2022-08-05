@@ -33,6 +33,7 @@
     <body class="container-fluid d-flex flex-column justify-content-center align-items-center text-center">
 
         <header>
+            <!-- (MY path) http://localhost/y.doranco-5-PHP/3-vitamines/index.php -->
             <h1>EXO 3 <br>(Lawrence's PHP lesson)
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,7 +65,6 @@
                 <h2>Welcome to Clémence's Fruggies Database</h2>
                 <?php
                     // Connexion à la base de données (paramètres de connexion)
-                    // (MY path) http://localhost/y.doranco-5-PHP/3-vitamines/index.php
                     // (pr Gwenn) https://www.php.net/manual/fr/function.round.php
                     $adresseBdd = "localhost:3306"; // Mac: 8889, Windows:3306 (moi)
                     $utilisateurBdd = "root";
@@ -224,4 +224,4 @@
 
 
 
-
+<!-- SELECT * FROM fruggies WHERE category = "fruit" -->
