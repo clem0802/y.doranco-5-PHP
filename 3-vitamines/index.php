@@ -19,6 +19,7 @@
             crossorigin="anonymous" 
             referrerpolicy="no-referrer" 
         />
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -59,6 +60,7 @@
                 echo "<br>";
             ?>
 
+            <div class="crown"><i class="fa-solid fa-crown"></i></div>
             <h2>Welcome to Clémence's Fruggies Database</h2>
             <?php
                 // Connexion à la base de données (paramètres de connexion)

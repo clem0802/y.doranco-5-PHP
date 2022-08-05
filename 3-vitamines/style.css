@@ -27,6 +27,9 @@ main {
     margin: 0 auto;
     background-color: rgb(242, 242, 214);
 }
+.crown i {
+    color: yellow;
+}
 h2 {
     color: #228B22;
     /* color: #32CD32; */
