@@ -48,148 +48,148 @@
     
 
         <div class="container-fluid">
-        <main class="w-75 container-fluid d-flex flex-column">
+            <main class="w-75 container-fluid d-flex flex-column">
 
-            <!-- (1) Manip Connection - phpMyAdmin -->
-            <?php
-                $paris = new DateTime('now', new DateTimeZone('Europe/Paris'));
-                echo "Current time of Paris is: ", $paris->format("d-m-Y H:i:s"),'<br>';
-                echo "<br>";
-                echo "<br>";
-                echo "<br>";
-                echo "<br>";
-            ?>
+                <!-- (1) Manip Connection - phpMyAdmin -->
+                <?php
+                    $paris = new DateTime('now', new DateTimeZone('Europe/Paris'));
+                    echo "Current time of Paris is: ", $paris->format("d-m-Y H:i:s"),'<br>';
+                    echo "<br>";
+                    echo "<br>";
+                    echo "<br>";
+                    echo "<br>";
+                ?>
 
-            <div class="crown"><i class="fa-solid fa-crown"></i></div>
-            <h2>Welcome to Clémence's Fruggies Database</h2>
-            <?php
-                // Connexion à la base de données (paramètres de connexion)
-                // (MY path) http://localhost/y.doranco-5-PHP/3-vitamines/index.php
-                // (pr Gwenn) https://www.php.net/manual/fr/function.round.php
-                $adresseBdd = "localhost:3306"; // Mac: 8889, Windows:3306 (moi)
-                $utilisateurBdd = "root";
-                $mdpUtilisateurBdd = "root"; // Mac: "root", Windows: ""
-                $nomBdd = "vitamines";
-            
-            // pour tester si la connexion est bonne, exécuter la connexion
-            // "$connexion" est une variable de connexion
-            try {
-                        // méthode de connexion, PDO (PHP Data Objects)
-                $connexion = new PDO("mysql:host=" . $adresseBdd . ";dbname=" . $nomBdd, $utilisateurBdd, $mdpUtilisateurBdd); 
-                echo "Congrats!", '<br>';
-                echo "Seeing this message means you are successfully connected to my Fruggies Database :)";
-            }
-            catch(PDOException $erreur){
-                echo "Erreur: " . $erreur->getMessage();
-            }
-            ?>
-            
-
-            <!-- (2) FORM -->
-            <form action="https://public.herotofu.com/v1/d5377820-0cf0-11ed-9bdb-53c785fa3343" method="POST" class="container-fluid d-flex flex-column">
-                <h2>Fruggies Subscription Form</h2>
-                <p>Which one would you prefer? fruit or veggie?</p>
-                <p>Wanna contact me? Please test it, I will indeed reply.</p><br>
-                <input type="text" name="prenom" placeholder="Your first name">
-                <input type="text" name="email" placeholder="Your email">
-                <input type="password" name="mdp" placeholder="Set your password">
-                <input type="password" name="mdp-confirmation" placeholder="Confirm your password">
-                <textarea name="message" id="message" cols="28" rows="5" placeholder="Your message"></textarea>
-                <input type="submit" name="inscription" value="Submit" class="submit">
-            </form>
-            <br>
-            <br>
-
-
-            <!-- to check if the FORM is submitted + COOKIES -->
-            <?php 
-            if ($_POST["inscription"]){
-                // récupération des champs
-                $prenom = $_POST["prenom"];
-                $email = $_POST["email"];
-                $mdp = $_POST["mdp"];
-                $message = $_POST["message"];
-                $mdpConfirmation = $_POST["mdp-confirmation"];
-
-                echo "L'utilisateur a bien été enregistré:<br>";
-                echo $prenom . "<br>" . $email . "<br>" . $mdp . "<br>" . $message . "<br>" .$mdpConfirmation;
-
-
-                // CRÉATION of COOKIES for users
-                // 3600 = (1 hour)
-                setcookie("prenom", $prenom, time() + (3600*30) );
-                setcookie("email", $email, time() + (3600*30) );
-                setcookie("mdp", $mdp, time() + (3600*30) );
-                setcookie("message", $message, time() + (3600*30) );
-            }
-            ?>
-
-
-
-            <!-- ************************************************* -->
-            <!-- FROM2 - JOURS 5 (INSERTION) -->
-            <form class="form2" method="POST">
-                <h2>Publish your fruggie</h2>
-                <input type="text" name="name" placeholder="Fruggie name">
-                <input type="text" name="category" placeholder="Type 'fruit' or 'veggie'">
-                <input type="text" name="image" placeholder="Paste your fruggie URL">
-                <textarea name="description" placeholder="Describe your fruggie"></textarea>
-                <input type="submit" name="publish-fruggie" value="Publish" class="submit">
-            </form>
-            <br>
-            <br>
-
-            <?php
-            // si le formulaire de publication d'article est soumi
-            if ($_POST['publish-fruggie']){
-
-                $name = $_POST['name'];
-                $description = $_POST['description'];
-                $category = $_POST['category'];
-                $image = $_POST['image'];
+                <div class="crown"><i class="fa-solid fa-crown"></i></div>
+                <h2>Welcome to Clémence's Fruggies Database</h2>
+                <?php
+                    // Connexion à la base de données (paramètres de connexion)
+                    // (MY path) http://localhost/y.doranco-5-PHP/3-vitamines/index.php
+                    // (pr Gwenn) https://www.php.net/manual/fr/function.round.php
+                    $adresseBdd = "localhost:3306"; // Mac: 8889, Windows:3306 (moi)
+                    $utilisateurBdd = "root";
+                    $mdpUtilisateurBdd = "root"; // Mac: "root", Windows: ""
+                    $nomBdd = "vitamines";
                 
-                $connexion->query("INSERT INTO fruggies (name, description, category, image) VALUES ('$name', '$description','$category', '$image')");
-
-                echo "Your fruggie is published";
-            }
-            ?>
-            <!-- An apple is red or green, sweet and slightly sour, this fruit is great. -->
-            <!-- ************************************************* -->
-
-
-
-
-            <!-- (3) GET -->
-            <!-- to GET the fruggies created and stored in phpMyAdmin -->
-            <!-- to run each SQL request, so to have them shown on the browser -->
-            <!-- to loop over each fruggie -->
-            <?php
-                // $fruggies = $connexion->query("SELECT * FROM fruggies WHERE id = 1 OR id = 2");
-                $fruggies = $connexion->query("SELECT * FROM fruggies");
-
-                echo "<ul class='container-fluid flex-row flex-wrap'>";
-                foreach($fruggies as $fruggie) {
-                    echo "<li class='container-fluid'>
-                    <h3 class='name'>" . $fruggie['name'] . "</h3>
-                    <p class='category'>Fruggie category: " . $fruggie['category'] . "</p>
-                    <img src=" . $fruggie['image'] . ">
-                    <p class='descript'>" . $fruggie['description'] . "</p>
-                        </li>";
+                // pour tester si la connexion est bonne, exécuter la connexion
+                // "$connexion" est une variable de connexion
+                try {
+                            // méthode de connexion, PDO (PHP Data Objects)
+                    $connexion = new PDO("mysql:host=" . $adresseBdd . ";dbname=" . $nomBdd, $utilisateurBdd, $mdpUtilisateurBdd); 
+                    echo "Congrats!", '<br>';
+                    echo "Seeing this message means you are successfully connected to my Fruggies Database :)";
                 }
-                echo "</ul>";
-                echo "<br>";
-                echo "<br>";
-            ?>
+                catch(PDOException $erreur){
+                    echo "Erreur: " . $erreur->getMessage();
+                }
+                ?>
+                
+
+                <!-- (2) FORM -->
+                <form action="https://public.herotofu.com/v1/d5377820-0cf0-11ed-9bdb-53c785fa3343" method="POST" class="container-fluid d-flex flex-column">
+                    <h2>Fruggies Subscription Form</h2>
+                    <p>Which one would you prefer? fruit or veggie?</p>
+                    <p>Wanna contact me? Please test it, I will indeed reply.</p><br>
+                    <input type="text" name="prenom" placeholder="Your first name">
+                    <input type="text" name="email" placeholder="Your email">
+                    <input type="password" name="mdp" placeholder="Set your password">
+                    <input type="password" name="mdp-confirmation" placeholder="Confirm your password">
+                    <textarea name="message" id="message" cols="28" rows="5" placeholder="Your message"></textarea>
+                    <input type="submit" name="inscription" value="Submit" class="submit">
+                </form>
+                <br>
+                <br>
 
 
-            <!-- (4) ATTRIBUTION -->
-            <div class="attribution text-center">
-                PHP Exercise Project<br>
-                Coded by <a target="_blank" href="https://portfolio-clemence.netlify.app">Clémence TAN</a>
-                <p>&copy; Copyright 2022 - All rights reserved</p>
-            </div>
+                <!-- to check if the FORM is submitted + COOKIES -->
+                <?php 
+                if ($_POST["inscription"]){
+                    // récupération des champs
+                    $prenom = $_POST["prenom"];
+                    $email = $_POST["email"];
+                    $mdp = $_POST["mdp"];
+                    $message = $_POST["message"];
+                    $mdpConfirmation = $_POST["mdp-confirmation"];
 
-        </main>
+                    echo "L'utilisateur a bien été enregistré:<br>";
+                    echo $prenom . "<br>" . $email . "<br>" . $mdp . "<br>" . $message . "<br>" .$mdpConfirmation;
+
+
+                    // CRÉATION of COOKIES for users
+                    // 3600 = (1 hour)
+                    setcookie("prenom", $prenom, time() + (3600*30) );
+                    setcookie("email", $email, time() + (3600*30) );
+                    setcookie("mdp", $mdp, time() + (3600*30) );
+                    setcookie("message", $message, time() + (3600*30) );
+                }
+                ?>
+
+
+
+                <!-- ************************************************* -->
+                <!-- FROM2 - JOURS 5 (INSERTION) -->
+                <form class="form2" method="POST">
+                    <h2>Publish your fruggie</h2>
+                    <input type="text" name="name" placeholder="Fruggie name">
+                    <input type="text" name="category" placeholder="Type 'fruit' or 'veggie'">
+                    <input type="text" name="image" placeholder="Paste your fruggie URL">
+                    <textarea name="description" placeholder="Describe your fruggie"></textarea>
+                    <input type="submit" name="publish-fruggie" value="Publish" class="submit">
+                </form>
+                <br>
+                <br>
+
+                <?php
+                // si le formulaire de publication d'article est soumi
+                if ($_POST['publish-fruggie']){
+
+                    $name = $_POST['name'];
+                    $description = $_POST['description'];
+                    $category = $_POST['category'];
+                    $image = $_POST['image'];
+                    
+                    $connexion->query("INSERT INTO fruggies (name, description, category, image) VALUES ('$name', '$description','$category', '$image')");
+
+                    echo "Your fruggie is published";
+                }
+                ?>
+                <!-- An apple is red or green, sweet and slightly sour, this fruit is great. -->
+                <!-- ************************************************* -->
+
+
+
+
+                <!-- (3) GET -->
+                <!-- to GET the fruggies created and stored in phpMyAdmin -->
+                <!-- to run each SQL request, so to have them shown on the browser -->
+                <!-- to loop over each fruggie -->
+                <?php
+                    // $fruggies = $connexion->query("SELECT * FROM fruggies WHERE id = 1 OR id = 2");
+                    $fruggies = $connexion->query("SELECT * FROM fruggies");
+
+                    echo "<ul class='container-fluid flex-row flex-wrap'>";
+                    foreach($fruggies as $fruggie) {
+                        echo "<li class='container-fluid'>
+                        <h3 class='name'>" . $fruggie['name'] . "</h3>
+                        <p class='category'>Fruggie category: " . $fruggie['category'] . "</p>
+                        <img src=" . $fruggie['image'] . ">
+                        <p class='descript'>" . $fruggie['description'] . "</p>
+                            </li>";
+                    }
+                    echo "</ul>";
+                    echo "<br>";
+                    echo "<br>";
+                ?>
+
+
+                <!-- (4) ATTRIBUTION -->
+                <div class="attribution text-center">
+                    PHP Exercise Project<br>
+                    Coded by <a target="_blank" href="https://portfolio-clemence.netlify.app">Clémence TAN</a>
+                    <p>&copy; Copyright 2022 - All rights reserved</p>
+                </div>
+
+            </main>
         </div>
        
 
