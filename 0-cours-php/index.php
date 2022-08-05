@@ -123,4 +123,3 @@
     </body>
 </html>
 
-<!-- le "echo" me fait penser à un truc drôle, quand je fais la cuisine, si je ne les apporte pas à la salle manger, mon mari et mon fils pensent tjrs qu'il n'y a rien à manger... je dois faire des "echo" sur les plats :) -->
