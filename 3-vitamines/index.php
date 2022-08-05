@@ -87,7 +87,7 @@
             <form action="https://public.herotofu.com/v1/d5377820-0cf0-11ed-9bdb-53c785fa3343" method="POST" class="container-fluid d-flex flex-column">
                 <h2>Fruggies Subscription Form</h2>
                 <p>Which one would you prefer? fruit or veggie?</p>
-                <p>Please subscribe so we can contact you for further information.</p><br>
+                <p>Wanna contact me? Please test it, I will indeed reply.</p><br>
                 <input type="text" name="prenom" placeholder="Your first name">
                 <input type="text" name="email" placeholder="Your email">
                 <input type="password" name="mdp" placeholder="Set your password">
