@@ -97,7 +97,7 @@
             </form>
             <br>
             <br>
-            <hr>
+
 
             <!-- to check if the FORM is submitted + COOKIES -->
             <?php 
@@ -121,6 +121,40 @@
                 setcookie("message", $message, time() + (3600*30) );
             }
             ?>
+
+
+
+            <!-- ************************************************* -->
+            <!-- FROM2 - JOURS 5 (INSERTION) -->
+            <form class="form2" method="POST">
+                <h2>Publish your fruggie</h2>
+                <input type="text" name="name" placeholder="Fruggie name">
+                <input type="text" name="category" placeholder="Type 'fruit' or 'veggie'">
+                <input type="text" name="image" placeholder="Paste your fruggie URL">
+                <textarea name="description" placeholder="Describe your fruggie"></textarea>
+                <input type="submit" name="publish-fruggie" value="Publish" class="submit">
+            </form>
+            <br>
+            <br>
+
+            <?php
+            // si le formulaire de publication d'article est soumi
+            if ($_POST['publish-fruggie']){
+
+                $name = $_POST['name'];
+                $description = $_POST['description'];
+                $category = $_POST['category'];
+                $image = $_POST['image'];
+                
+                $connexion->query("INSERT INTO fruggies (name, description, category, image) VALUES ('$name', '$description','$category', '$image')");
+
+                echo "Your fruggie is published";
+            }
+            ?>
+            <!-- An apple is red or green, sweet and slightly sour, this fruit is great. -->
+            <!-- ************************************************* -->
+
+
 
 
             <!-- (3) GET -->
@@ -185,6 +219,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </body>
 </html>
+
 
 
 

@@ -73,6 +73,48 @@ form :nth-child(9) {
 .submit:hover {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
 }
+
+
+/* FORM2 */
+/* ---------------------------------------- */
+.form2 ::placeholder {
+    font-weight: bold;
+}
+input, textarea {
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    width: 70%;
+    border: rgb(120, 174, 120) 1px solid;
+    margin: 2px;
+}
+.form2 :nth-child(2) {
+    background-color: #99cd3240;
+}
+.form2 :nth-child(3) {
+    background-color: #36373624;
+}
+.form2 :nth-child(4) {
+    background-color: #99cd3240;
+}
+.form2 :nth-child(5) {
+    background-color: #36373624;
+}
+.form2 :nth-child(6) {
+    background-color: #9ACD32;
+}
+.submit{
+    font-size: 30px;
+    font-weight: bold;
+}
+.submit:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+
+
 .name {
     background-color: #9ACD32;
     font-weight: bold;
