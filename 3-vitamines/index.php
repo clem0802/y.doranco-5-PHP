@@ -116,10 +116,10 @@
 
                     // CRÉATION of COOKIES for users
                     // 3600 = (1 hour)
-                    setcookie("prenom", $prenom, time() + (3600*30) );
-                    setcookie("email", $email, time() + (3600*30) );
-                    setcookie("mdp", $mdp, time() + (3600*30) );
-                    setcookie("message", $message, time() + (3600*30) );
+                    setcookie("prenom", $prenom, time() + (3600*24*30) );
+                    setcookie("email", $email, time() + (3600*24*30) );
+                    setcookie("mdp", $mdp, time() + (3600*24*30) );
+                    setcookie("message", $message, time() + (3600*24*30) );
                 }
                 ?>
 
