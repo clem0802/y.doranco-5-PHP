@@ -114,7 +114,6 @@
                     echo "L'utilisateur a bien été enregistré:<br>";
                     echo $prenom . "<br>" . $email . "<br>" . $mdp . "<br>" . $message . "<br>" .$mdpConfirmation;
 
-
                     // CRÉATION of COOKIES for users
                     // 3600 = (1 hour)
                     setcookie("prenom", $prenom, time() + (3600*30) );
@@ -140,7 +139,7 @@
                 <br>
 
                 <?php
-                // si le formulaire de publication d'article est soumi
+                // si le formulaire de publication d'article est soumis
                 if ($_POST['publish-fruggie']){
 
                     $name = $_POST['name'];
@@ -196,7 +195,7 @@
         <!-- FOOTER -->
         <!-- ******************************************************** -->
         <footer>
-            <p>Find us on social media</p>
+            <p>Find me on social media</p>
             <div class="social-container">
 
                 <div>
