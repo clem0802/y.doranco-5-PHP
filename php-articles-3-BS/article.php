@@ -19,7 +19,7 @@
     <main class="container p-3">
         <?php
         // Connexion à la base de données
-        $adresseBdd = "localhost:8889"; // Mac: 8889, Windows: 3307
+        $adresseBdd = "localhost:3306"; // Mac: 8889, Windows: 3307
         $utilisateurBdd = "root";
         $mdpUtilisateurBdd = "root"; // Mac: "root", Windows : ""
         $nomBdd = "blog";

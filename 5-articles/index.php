@@ -82,7 +82,7 @@
                     <div class="card-body">
                         <form method="POST">
                             <h2>Publier un article</h2>
-                            <input type="text" name="title" placeholder="Titre de l'article" class="mb-3 form-control">
+                            <input type="text" name="titre" placeholder="Titre de l'article" class="mb-3 form-control">
                             <textarea name="contenu" class="mb-3 form-control"></textarea>
                             <input type="submit" name="publier-article" value="Publier l'article" class="btn btn-primary">
                         </form>
@@ -136,7 +136,7 @@
                         <div class='card-body'>
                             <h3>" . $article['titre'] . "</h3>
                             <p>Publié le: " . $article['date'] . "</p>
-                            <a href='article.php?id=" . $article['id'] . "'>Lire l'article</a>
+                            <a target='_blank' href='article.php?id=" . $article['id'] . "'>Lire l'article</a>
                         </div>
                     </div>
                 </li>";

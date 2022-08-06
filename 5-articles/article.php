@@ -27,7 +27,7 @@
         <main class="container p-3">
             <?php
                 // Connexion àà la BDD
-                $adresseBdd = "localshot:3306"; // Mac: 8889, Windows: 3306 ou 3307
+                $adresseBdd = "localhost:3306"; // Mac: 8889, Windows: 3306 ou 3307
                 $utilisateurBdd = "root";
                 $mdpUtilisateurBdd = "root"; // Mac: "root", Windows: ""
                 $nomBdd = "blog";

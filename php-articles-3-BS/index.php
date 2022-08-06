@@ -11,16 +11,18 @@
     <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 
+
 <body>
     <header class="p-3">
         <h1>Cours PHP</h1>
+        <!-- (path) http://localhost/y.doranco-5-PHP/php-articles-3-BS/index.php -->
     </header>
 
     <main class="container p-3">
 
         <?php
         // Connexion à la base de données
-        $adresseBdd = "localhost:8889"; // Mac: 8889, Windows: 3307
+        $adresseBdd = "localhost:3306"; // Mac: 8889, Windows: 3307
         $utilisateurBdd = "root";
         $mdpUtilisateurBdd = "root"; // Mac: "root", Windows : ""
         $nomBdd = "blog";
@@ -110,7 +112,7 @@
                     <div class='card-body'>
                         <h3>" . $article['titre'] . "</h3>
                         <p>Publié le: " . $article['date'] . "</p>
-                        <a href='article.php?id=" . $article['id'] . "'>Lire l'article</a>
+                        <a target='_blank' href='article.php?id=" . $article['id'] . "'>Lire l'article</a>
                     </div>
                 </div>
             </li>";
