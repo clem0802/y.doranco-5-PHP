@@ -96,13 +96,6 @@
         
             <!-- JOURS 5 (INSERTION !!) -->
             <!-- ************************************************* -->
-            <!-- <form method="POST">
-                <h2>Publier un article</h2>
-                <input type="text" name="titre" placeholder="Titre de l'article">
-                <textarea name="contenu"></textarea>
-                <input type="submit" name="publier-article" value="Publier">
-            </form> -->
-
             <?php
             // si le formulaire de publication d'article est soumis
             if ($_POST['publier-article']){

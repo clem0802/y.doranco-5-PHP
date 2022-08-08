@@ -40,7 +40,7 @@
         ?>
 
         <?php
-        if (!$_COOKIE['login']) {
+        if (isset($_COOKIE['login'])&&!$_COOKIE['login']) {
         ?>
 
             <div class="card">
@@ -59,14 +59,14 @@
         ?>
 
         <?php
-        if ($_POST['connexion']) {
+        if (isset($_POST['connexion'])&&!$_POST['connexion']) {
 
             setcookie('login', $_POST['login'], time() + 3600);
         }
         ?>
 
         <?php
-        if ($_COOKIE['login']) {
+        if (isset($_COOKIE['login'])&&!$_COOKIE['login']) {
         ?>
             <div class="card">
                 <div class="card-body">
@@ -85,7 +85,7 @@
 
         <?php
         // Si le formulaire de publication d'article est soumis
-        if ($_POST['publier-article']) {
+        if (isset($_POST['publier-article'])&&!$_POST['publier-article']) {
 
             // Récupération des champs
             $titre = $_POST['titre'];
