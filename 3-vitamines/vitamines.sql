@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : ven. 05 août 2022 à 10:21
+-- Généré le : mar. 09 août 2022 à 11:28
 -- Version du serveur : 5.7.24
 -- Version de PHP : 8.0.1
 
@@ -102,7 +102,8 @@ INSERT INTO `fruggies` (`id`, `name`, `description`, `category`, `image`) VALUES
 (64, 'courge', 'This is an easy, healthy summer veggie side dish that can be roasted, grilled, sautéed, or even fried in the air fryer!', 'veggie', 'https://images.unsplash.com/photo-1570142056130-9f6b59c6287a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNxdWFzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'),
 (66, 'courge', 'This is an easy, healthy summer veggie side dish that can be roasted, grilled, sautéed, or even fried in the air fryer!', 'veggie', 'https://images.unsplash.com/photo-1570142056130-9f6b59c6287a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNxdWFzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'),
 (67, 'courge', 'This is an easy, healthy summer veggie side dish that can be roasted, grilled, sautéed, or even fried in the air fryer!', 'veggie', 'https://images.unsplash.com/photo-1570142056130-9f6b59c6287a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNxdWFzaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'),
-(68, 'cherry', 'A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit).', 'fruit', 'https://images.unsplash.com/photo-1625850790972-47ed272715c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGNoZXJyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+(68, 'cherry', 'A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit).', 'fruit', 'https://images.unsplash.com/photo-1625850790972-47ed272715c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGNoZXJyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'),
+(69, 'golden berry', 'Also known as \"ground cherry\" and often made into fruit-based sauces, pies, puddings, jams or eaten fresh in salads and fruit salads, this fruit is also popular as a decorative garnish for desserts.', 'fruit', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdH8GqNBvE-RU71tQGXhrTg3o643uSASFZhQ&usqp=CAU');
 
 --
 -- Index pour les tables déchargées
@@ -122,7 +123,7 @@ ALTER TABLE `fruggies`
 -- AUTO_INCREMENT pour la table `fruggies`
 --
 ALTER TABLE `fruggies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

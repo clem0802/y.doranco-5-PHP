@@ -104,7 +104,7 @@
 
                 <!-- to check if the FORM is submitted + COOKIES -->
                 <?php 
-                if ($_POST["inscription"]){
+                if (isset($_POST['inscription'])&&!$_POST['inscription']) {
                     // récupération des champs
                     $prenom = $_POST["prenom"];
                     $email = $_POST["email"];
