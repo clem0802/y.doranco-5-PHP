@@ -50,6 +50,7 @@
 
         <div class="container-fluid">
             <main class="w-75 container-fluid d-flex flex-column">
+            <!-- col-lg-6  col-lg-6 -->
 
                 <!-- (1) Manip Connection - phpMyAdmin -->
                 <?php
@@ -62,7 +63,7 @@
                 ?>
 
                 <div class="crown"><i class="fa-solid fa-crown"></i></div>
-                <h2>Welcome to Clémence's Fruggies Database</h2>
+                <h2>Welcome to Clémence's PHP Fruggies Database</h2>
                 <?php
                     // Connexion à la base de données (paramètres de connexion)
                     // (pr Gwenn) https://www.php.net/manual/fr/function.round.php
@@ -140,7 +141,7 @@
 
                 <?php
                 // si le formulaire de publication d'article est soumis
-                if ($_POST['publish-fruggie']){
+                if (isset($_POST['publish-fruggie'])&&!$_POST['publish-fruggie']) {
 
                     $name = $_POST['name'];
                     $description = $_POST['description'];
@@ -166,9 +167,9 @@
                     // $fruggies = $connexion->query("SELECT * FROM fruggies WHERE id = 1 OR id = 2");
                     $fruggies = $connexion->query("SELECT * FROM fruggies");
 
-                    echo "<ul class='container-fluid flex-row flex-wrap'>";
+                    echo "<ul class='container-fluid d-flex justify-content-center'>";
                     foreach($fruggies as $fruggie) {
-                        echo "<li class='container-fluid'>
+                        echo "<li class='container-fluid col-lg-3 m-1'>
                         <h3 class='name'>" . $fruggie['name'] . "</h3>
                         <p class='category'>Fruggie category: " . $fruggie['category'] . "</p>
                         <img src=" . $fruggie['image'] . ">
