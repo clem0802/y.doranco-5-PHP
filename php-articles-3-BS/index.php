@@ -60,11 +60,11 @@
 
         <?php
         if (isset($_POST['connexion'])&&!$_POST['connexion']) {
-
             setcookie('login', $_POST['login'], time() + 3600);
         }
         ?>
 
+        <!-- Publier un article -->
         <?php
         if (isset($_COOKIE['login'])&&!$_COOKIE['login']) {
         ?>

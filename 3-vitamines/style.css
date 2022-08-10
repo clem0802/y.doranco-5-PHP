@@ -114,10 +114,19 @@ input, textarea {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
 }
 
+/* FRUIT - VEGGIE buttons */
+/* --------------------------------- */
+.veggie {
+    background-color: #9ACD32;;
+    font-size: 30px;
+    font-weight: bold;
+}
+.submit:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
 
 
-
-
+/* --------------------------------- */
 .name {
     background-color: #9ACD32;
     font-weight: bold;
@@ -227,10 +236,3 @@ i:hover {
 
 
 
-/* 
-@media (min-width: 700px) {
-    div {
-        display: flex;
-        flex-wrap: wrap;
-    }
-} */

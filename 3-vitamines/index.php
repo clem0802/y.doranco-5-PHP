@@ -153,13 +153,26 @@
                     echo "Your fruggie is published";
                 }
                 ?>
-                <!-- An apple is red or green, sweet and slightly sour, this fruit is great. -->
+  
                 <!-- ************************************************* -->
+                <!-- (3) GET by category (fruit or veggie)-->
+                <div class=" btn-container d-flex justify-content-center align-items-center">
+                    <button type="button" class="fruit rounded m-2 w-25">get only fruit</button>
+                    <button type="button" class="veggie rounded m-2 w-25">get only veggie</button>
+                </div>
+                <br>
+
+                <?php 
+                // if (isset($_GET['login'])&&!$_GET['login']) 
+                ?>
 
 
 
 
-                <!-- (3) GET -->
+
+
+                <!-- ************************************************* -->
+                <!-- (4) GET général-->
                 <!-- to GET the fruggies created and stored in phpMyAdmin -->
                 <!-- to run each SQL request, so to have them shown on the browser -->
                 <!-- to loop over each fruggie -->
